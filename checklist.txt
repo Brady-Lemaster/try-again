@@ -14,6 +14,9 @@ contact page
  - contact info
 games page
  - using 3kh0 game assets
+private chatroom
+ - scaledrone for a private chatroom for me and my friends
+ - scaledrone for a public chatroom for probably like the two or three people who will use this webpage
 styleize
  - use tailwind to add styles to the page
 easter eggs
