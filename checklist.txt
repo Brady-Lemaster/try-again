@@ -12,13 +12,6 @@ projects page
  - project boost
 blog page
  - "the first blog" blog
-friends page
- - link all of their accounts that they will let me
-contact page
- - contact info
-chatrooms
- - scaledrone for a private chatroom for me and my friends
- - scaledrone for a public chatroom for probably like the two or three people who will use this webpage
 styleize
  - use tailwind to add styles to the page
 easter eggs
