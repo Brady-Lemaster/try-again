@@ -8,12 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body x-data="{ shownav: true }"> 
+  <body x-data="{ shownav: true }" class="bg-slate-300"> 
     <div x-show="open" class="fixed z-10 p-5 bg-slate-400">
-      <div class="p-3 float-left bg-slate-500 text-slate-300">
+      <div class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block">
         navitem
       </div>
     </div>
-    <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-0 right-0 margin-5 z-20">burger</button>
+    <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-0 right-0 margin-8 z-20">burger</button>
   </body>
 </html>
