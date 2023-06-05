@@ -6,15 +6,17 @@ about page
  - journey as a software engineer
 projects page
  - fix and link all of my previous projects
+ - games page using 3kh0 game assets
+ - huzunian
+ - pnbmn
+ - project boost
 blog page
  - "the first blog" blog
 friends page
  - link all of their accounts that they will let me
 contact page
  - contact info
-games page
- - using 3kh0 game assets
-private chatroom
+chatrooms
  - scaledrone for a private chatroom for me and my friends
  - scaledrone for a public chatroom for probably like the two or three people who will use this webpage
 styleize
