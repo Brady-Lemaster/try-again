@@ -9,8 +9,8 @@
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
   <body x-data="{ 
-                shownav: true;
-                darkmode: true;
+                  shownav: true;
+                  darkmode: true;
                 }" class="bg-slate-300"> 
     <div x-show="shownav" class="fixed z-10 p-5 bg-slate-400 w-full">
       <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
