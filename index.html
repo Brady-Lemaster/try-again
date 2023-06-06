@@ -10,20 +10,20 @@
   </head>
   <body x-data="{ shownav: true }" class="bg-slate-300"> 
     <div x-show="shownav" class="fixed z-10 p-5 bg-slate-400 w-full">
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './home'">   
+      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './pages/home.html'">   
         Home
       </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './about'">
+      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './pages/about.html'">
         About
       </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './projects'">
+      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './pages/projects.html'">
         Projects
       </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './blog'">
+      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('youridname').src = './pages/blog.html'">
         Blog
       </button>
     </div>
     <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-5 right-5 z-20">Burger</button>
-    <iframe src="./home" class="h-full w-full z-0"></iframe>
+    <iframe src="./pages/home.html" class="h-full w-full z-0"></iframe>
   </body>
 </html>
