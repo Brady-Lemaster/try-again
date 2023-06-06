@@ -41,7 +41,9 @@
     <iframe src="./pages/home.html" class="h-full w-full z-0" id="iFrameMain"></iframe>
     <script>
       const loadingScreen = document.getElementById("loading");
-      loadingScreen.remove();
+      setTimeout(function(){     
+        loadingScreen.remove();
+      },500);
     </script>
   </body>
 </html>
