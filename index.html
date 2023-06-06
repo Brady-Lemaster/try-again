@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="en" x-data="">
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">   
     <title>
@@ -8,31 +8,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body x-data="{ 
-                  shownav: true;
-                  darkmode: true;
-                }" class="bg-slate-300"> 
-    <div x-show="shownav" class="fixed z-10 p-5 bg-slate-400 w-full rounded-b-full">
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
-        Home
-      </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/about.html'">
-        About
-      </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/projects.html'">
-        Projects
-      </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/blog.html'">
-        Blog
-      </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="darkmode=true" x-show="!darkmode">
-        Dark
-      </button>
-      <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="darkmode=false" x-show="darkmode">
-        Light
-      </button>
+  <body x-data="{ darkmode: true }" class="bg-slate-300">
+    <div x-data="{ darkmode: true }">
+      <div x-show="shownav" class="fixed z-10 p-5 bg-slate-400 w-full rounded-b-full">
+        <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
+          Home
+        </button>
+        <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/about.html'">
+          About
+        </button>
+        <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/projects.html'">
+          Projects
+        </button>
+        <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="document.getElementById('iFrameMain').src = './pages/blog.html'">
+          Blog
+        </button>
+        <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="darkmode=true" x-show="!darkmode">
+          Dark
+        </button>
+        <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5" @click="darkmode=false" x-show="darkmode">
+          Light
+        </button>
+      </div>
+      <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-5 right-5 z-20">Burger</button>
     </div>
-    <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-5 right-5 z-20">Burger</button>
     <iframe src="./pages/home.html" class="h-full w-full z-0" id="iFrameMain"></iframe>
   </body>
 </html>
