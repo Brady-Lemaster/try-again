@@ -10,10 +10,10 @@
   </head>
   <body x-data="{ darkmode: true }" class="bg-slate-300">
     <div x-data="{ shownav: true }">
-      <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-5 right-5 z-20 rounded-bl-lg rounded-br-3xl">
+      <button @click="shownav=!shownav" class="fixed bg-slate-500 text-slate-300 p-3 top-3 right-3 z-20 rounded-bl-lg rounded-br-3xl">
         Burger
       </button>
-      <div x-show="shownav" class="fixed z-10 p-5 w-full">
+      <div x-show="shownav" class="fixed z-10 w-full">
         <button class="p-3 float-left bg-slate-500 text-slate-300 margin-3 inline-block mr-5 rounded-bl-3xl rounded-br-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
           Home
         </button>
