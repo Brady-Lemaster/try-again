@@ -5,22 +5,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body x-data="{ section: 0 }" class="bg-violet-400">
+  <body x-data="{ section: 0 }" class="bg-violet-400 text-[1rem]">
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
       LOADING PAGE
     </div>
+    <button class="p-3 fixed z-10 top-[1rem] left-[1rem]" x-show="!section=0">
+      Exit Blog
+    </button>
     <div class="grid grid-cols-1 gap-1">
-      <p class="bg-indigo-800 text-indigo-400 text-[1rem] p-3">
+      <p class="bg-indigo-800 text-indigo-400 p-3 rounded-t-3xl rounded-b-lg">
         Blog
       </p>
-      <button class="bg-indigo-800 text-indigo-400 p-3" @click="section=1">
+      <button class="bg-indigo-800 text-indigo-400 p-3 rounded-b-3xl rounded-t-lg" @click="section=1">
         First Post!     
       </button>    
     </div>
-    <div x-show="section=1 w-full y-full" class="">
-      <button class="p-3">
-        Exit Blog
-      </button>
+    <div class="w-full y-full" x-show="section=1">
     </div>
     <script>
       const loadingScreen = document.getElementById("loading");
