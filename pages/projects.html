@@ -1,1 +1,19 @@
-projects.html
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+  </head>
+  <body x-data="{ placeholder: true }" class="bg-violet-400">
+    <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
+      LOADING PAGE
+    </div>
+    <script>
+      const loadingScreen = document.getElementById("loading");
+      setTimeout(function(){     
+        loadingScreen.remove();
+      },250);
+    </script>
+  </body>
+</html>
