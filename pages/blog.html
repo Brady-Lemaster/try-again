@@ -5,22 +5,25 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body x-data="{ section: 0 }" class="bg-violet-400 text-[1rem]">
+  <body x-data="{ section: 0 }" class="bg-violet-400 text-[1rem] text-indigo-400">
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
       LOADING PAGE
     </div>
-    <button class="p-3 fixed z-10 top-[1rem] left-[1rem]" x-show="!section=0">
+    <button class="p-3 fixed z-20 top-0 left-0 bg-red-600 text-red-200 rounded-br-3xl" x-show="!section=0">
       Exit Blog
     </button>
     <div class="grid grid-cols-1 gap-1">
-      <p class="bg-indigo-800 text-indigo-400 p-3 rounded-t-3xl rounded-b-lg">
+      <p class="bg-indigo-800 p-3 rounded-t-3xl rounded-b-lg">
         Blog
       </p>
-      <button class="bg-indigo-800 text-indigo-400 p-3 rounded-b-3xl rounded-t-lg" @click="section=1">
+      <button class="bg-indigo-800 p-3 rounded-b-3xl rounded-t-lg" @click="section=1">
         First Post!     
       </button>    
     </div>
-    <div class="w-full y-full" x-show="section=1">
+    <div class="w-full y-full bg-indigo-800 z-10" x-show="section=1">
+      <p class="mx-3 mt-3">
+        This is my first blog post! This was mainly made as a
+      </p>
     </div>
     <script>
       const loadingScreen = document.getElementById("loading");
