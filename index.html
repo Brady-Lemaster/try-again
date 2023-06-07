@@ -13,23 +13,23 @@
       LOADING
     </div>
     <div x-data="{ shownav: true }">
-      <button @click="shownav=!shownav" class="fixed bg-violet-700 text-violet-500 p-3 top-0 right-0 z-20 rounded-b-3xl">
+      <button @click="shownav=!shownav" class="fixed bg-violet-800 text-violet-400 p-3 top-0 right-0 z-20 rounded-b-3xl">
         Burger
       </button>
       <div x-show="shownav" class="fixed z-10 w-full">
-        <div class="p-3 float-right bg-violet-700 text-violet-500 inline-block ml-1 rounded-bl-lg rounded-br-3xl">
+        <div class="p-3 float-right bg-violet-800 text-violet-400 inline-block ml-1 rounded-bl-lg rounded-br-3xl">
           Burger
         </div>
-        <button class="p-3 float-right bg-violet-700 text-violet-500 inline-block mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/about.html'">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/about.html'">
           About
         </button>
-        <button class="p-3 float-right bg-violet-700 text-violet-500 inline-block mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/projects.html'">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/projects.html'">
           Projects
         </button>
-        <button class="p-3 float-right bg-violet-700 text-violet-500 mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/blog.html'">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/blog.html'">
           Blog
         </button>
-        <button class="p-3 float-right bg-violet-700 text-violet-500 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block rounded-bl-3xl rounded-br-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
           Home
         </button>
       </div>
