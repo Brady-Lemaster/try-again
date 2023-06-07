@@ -29,9 +29,25 @@
         <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/blog.html'">
           Blog
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
+        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
           Home
         </button>
+        <div x-data="{ devshow: false }">
+          <button x-show="!devshow" class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="devshow=!devshow">   
+            Dev
+          </button>
+          <div x-show="devshow">
+            <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="devshow=!devshow">   
+              Dev
+            </button>
+            <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/template.html'">
+              Template
+            </button>
+            <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="document.getElementById('iFrameMain').src = './pages/components.html'">
+              Components
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <iframe src="./pages/home.html" class="h-screen w-screen z-0" id="iFrameMain"></iframe>
