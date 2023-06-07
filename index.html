@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
-      LOADING
+      LOADING NAVIGATION
     </div>
     <div x-data="{ shownav: true }">
       <button @click="shownav=!shownav" class="fixed bg-violet-800 text-violet-400 p-3 top-0 right-0 z-20 rounded-b-3xl">
@@ -39,7 +39,7 @@
       const loadingScreen = document.getElementById("loading");
       setTimeout(function(){     
         loadingScreen.remove();
-      },750);
+      },250);
     </script>
   </body>
 </html>
