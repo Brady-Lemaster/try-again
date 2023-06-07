@@ -5,9 +5,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body x-data="{ placeholder: true }" class="bg-violet-400">
+  <body x-data="{ section: 0 }" class="bg-violet-400">
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
       LOADING PAGE
+    </div>
+    <div class="grid grid-cols-1 gap-1">
+      <p class="bg-indigo-800 text-indigo-400 text-[1rem] p-3">
+        Blog
+      </p>
+      <button class="bg-indigo-800 text-indigo-400 p-3" @click="section=1">
+        First Post!     
+      </button>    
+    </div>
+    <div x-show="section=1 w-full y-full" class="">
+      <button class="p-3">
+        Exit Blog
+      </button>
     </div>
     <script>
       const loadingScreen = document.getElementById("loading");
