@@ -8,12 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body>
+  <body class="bg-indigo-200">
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
       LOADING NAVIGATION
     </div>
     <div x-data="{ shownav: true }">
-      <button @click="shownav=!shownav" class="fixed bg-violet-800 text-violet-400 p-3 top-0 right-0 z-20 rounded-b-3xl">
+      <button @click="shownav=!shownav" class="fixed bg-violet-800 text-violet-400 p-3 z-20 rounded-b-3xl top-0 right-0">
         Navigation
       </button>
       <div x-show="shownav" class="fixed z-10 right-0 top-0">
@@ -55,7 +55,7 @@
       const loadingScreen = document.getElementById("loading");
       setTimeout(function(){     
         loadingScreen.remove();
-      },250);
+      },100);
     </script>
   </body>
 </html>
