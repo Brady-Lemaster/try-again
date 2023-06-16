@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body class="bg-indigo-200" x-data=" { page: home } ">
+  <body class="bg-indigo-200" x-data=" { page: 'home' }">
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl text-center" id="loading">
       LOADING
     </div>
@@ -20,24 +20,24 @@
         <div class="p-3 float-right bg-violet-800 text-violet-400 inline-block rounded-bl-lg rounded-br-3xl">
           Navigation
         </div>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="page=about">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="page='about'">
           About
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="page=projects">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="page='projects'">
           Projects
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="page=blog">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="page='blog'">
           Blog
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="page=home">   
+        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="page='home'">   
           Home
         </button>
       </div>
     </div>
-    <div x-show="page==home" x-data=" {  } ">
+    <div x-show="page=='home'" x-data=" {  } ">
       
     </div>
-    <div x-show="page==blog" x-data=" { section: 0 } ">
+    <div x-show="page=='blog'" x-data=" { section: 0 } ">
       <button class="p-3 fixed z-20 top-0 left-0 bg-red-600 text-red-200 rounded-br-3xl" x-show="!section==0" @click="section=0">
         Exit Blog
       </button>
@@ -64,10 +64,10 @@
         </p>
       </div>
     </div>
-    <div x-show="page==projects" x-data=" {  } ">
+    <div x-show="page=='projects'" x-data=" {  } ">
 
     </div>
-    <div x-show="page==about" x-data=" {  } ">
+    <div x-show="page=='about'" x-data=" {  } ">
 
     </div>
     <script>
