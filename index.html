@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">   
     <title>
-      Website
+      Brady Lemaster
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -16,39 +16,35 @@
       <button @click="shownav=!shownav" class="fixed bg-violet-800 text-violet-400 p-3 z-20 rounded-b-3xl top-0 right-0">
         Navigation
       </button>
-      <div x-show="shownav" class="fixed z-10 right-0 top-0">
+      <div x-show="shownav" class="fixed z-10 right-0 top-0" x-data="{ page: true }">
         <div class="p-3 float-right bg-violet-800 text-violet-400 inline-block rounded-bl-lg rounded-br-3xl">
           Navigation
         </div>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/about.html'">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="page=about">
           About
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/projects.html'">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 inline-block mr-1 rounded-b-lg" @click="page=projects">
           Projects
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/blog.html'">
+        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="page=blog">
           Blog
         </button>
-        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
+        <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="page=home">   
           Home
         </button>
-        <div x-data="{ devshow: false }" class="float-right">
-          <button x-show="!devshow" class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="devshow=!devshow">   
-            Dev
-          </button>
-          <div x-show="devshow">
-            <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="devshow=!devshow">   
-              Dev
-            </button>
-            <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/template.html'">
-              Template
-            </button>
-            <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="document.getElementById('iFrameMain').src = './pages/components.html'">
-              Components
-            </button>
-          </div>
-        </div>
       </div>
+    </div>
+    <div x-show="page==home">
+
+    </div>
+    <div x-show="page==blog">
+
+    </div>
+    <div x-show="page==projects">
+
+    </div>
+    <div x-show="page==about">
+
     </div>
     <script>
       const loadingScreen = document.getElementById("loading");
