@@ -10,7 +10,7 @@
   </head>
   <body class="bg-indigo-200">
     <div class="z-30 w-full h-full bg-red-600 fixed text-red-200 text-7xl" id="loading">
-      LOADING NAVIGATION
+      LOADING
     </div>
     <div x-data="{ shownav: true }">
       <button @click="shownav=!shownav" class="fixed bg-violet-800 text-violet-400 p-3 z-20 rounded-b-3xl top-0 right-0">
@@ -50,12 +50,11 @@
         </div>
       </div>
     </div>
-    <iframe src="./pages/home.html" class="h-screen w-screen z-0" id="iFrameMain"></iframe>
     <script>
       const loadingScreen = document.getElementById("loading");
       setTimeout(function(){     
         loadingScreen.remove();
-      },200);
+      },500);
     </script>
   </body>
 </html>
