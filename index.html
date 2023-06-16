@@ -32,7 +32,7 @@
         <button class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-b-lg" @click="document.getElementById('iFrameMain').src = './pages/home.html'">   
           Home
         </button>
-        <div x-data="{ devshow: false }">
+        <div x-data="{ devshow: false }" class="float-right">
           <button x-show="!devshow" class="p-3 float-right bg-violet-800 text-violet-400 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="devshow=!devshow">   
             Dev
           </button>
