@@ -13,23 +13,35 @@
       LOADING
     </div>
     <div x-data="{ shownav: true }" class="text-violet-400">
-      <button @click="shownav=!shownav" class="fixed bg-violet-800 p-3 z-20 rounded-b-3xl top-0 right-0">
+      <button @click="shownav=!shownav" class="fixed bg-green-600 text-green-200 p-3 z-20 rounded-b-3xl top-0 right-0" x-show="!shownav">
         Navigation
       </button>
       <div x-show="shownav" class="fixed z-10 right-0 top-0">
-        <div class="p-3 float-right bg-violet-800 inline-block rounded-bl-lg rounded-br-3xl">
+        <div class="p-3 float-right bg-red-600 text-red-200 inline-block rounded-bl-lg rounded-br-3xl">
           Navigation
         </div>
-        <button class="p-3 float-right bg-violet-800 inline-block mr-1 rounded-b-lg" @click="page=4">
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=4">
           About
         </button>
-        <button class="p-3 float-right bg-violet-800 inline-block mr-1 rounded-b-lg" @click="page=3">
+        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=4"> 
+          About
+        </button>
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=3">
           Projects
         </button>
-        <button class="p-3 float-right bg-violet-800 mr-1 inline-block rounded-b-lg" @click="page=2">
+        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=3">   
+          Projects
+        </button>
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=2">
           Blog
-        </button>   
-        <button class="p-3 float-right bg-violet-800 mr-1 inline-block rounded-bl-3xl rounded-br-lg" @click="page=1">   
+        </button> 
+        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=2">
+          Blog
+        </button>
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1"> 
+          Home
+        </button>
+        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1">  
           Home
         </button>
       </div>
