@@ -20,29 +20,29 @@
         <div @click="shownav=!shownav" class="p-3 float-right bg-red-600 text-red-200 inline-block rounded-bl-lg rounded-br-3xl">
           Navigation
         </div>
-        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=4" x-show="!page==4">
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=4">
           About
+          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=4" x-show="page==4"> 
+            About
+          </div>
         </button>
-        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=4" x-show="page==4"> 
-          About
-        </button>
-        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=3" x-show="!page==3">
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=3">
           Projects
+          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=3" x-show="page==3">   
+            Projects
+          </div>
         </button>
-        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=3" x-show="page==3">   
-          Projects
-        </button>
-        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=2" x-show="!page==2">
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=2">
           Blog
+          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=2" x-show="page==2">
+            Blog
+          </div>
         </button> 
-        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" @click="page=2" x-show="page==2">
-          Blog
-        </button>
-        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1" x-show="!page==1"> 
+        <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1"> 
           Home
-        </button>
-        <button class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1" x-show="page==1">  
-          Home
+          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1" x-show="page==1">  
+            Home
+          </div>
         </button>
       </div>
     </div>
@@ -78,10 +78,10 @@
         </p>
       </div>
     </div>
-    <div x-show="page==3" x-data=" {  } ">
+    <div x-show="page==3" x-data="{  }">
 
     </div>
-    <div x-show="page==4" x-data=" {  } ">
+    <div x-show="page==4" x-data="{  }">
 
     </div>
     <script>
