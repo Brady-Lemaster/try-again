@@ -22,28 +22,28 @@
         </div>
         <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=4">
           About
-          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" x-show="page==4"> 
-            About
-          </div>
         </button>
+        <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" x-show="page==4"> 
+          About
+        </div>
         <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=3">
-          Projects
-          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" x-show="page==3">   
-            Projects
-          </div>
+          Projects 
         </button>
+        <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" x-show="page==3">   
+          Projects
+        </div>
         <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-b-lg" @click="page=2">
           Blog
-          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" x-show="page==2">
-            Blog
-          </div>
         </button> 
+        <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-b-lg" x-show="page==2">
+          Blog
+        </div>
         <button class="p-3 float-right bg-green-600 text-green-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" @click="page=1"> 
           Home
-          <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" x-show="page==1">  
-            Home
-          </div>
         </button>
+        <div class="p-3 float-right bg-red-600 text-red-200 inline-block mr-1 rounded-bl-3xl rounded-br-lg" x-show="page==1">  
+          Home
+        </div>
       </div>
     </div>
     <div x-show="page==1" x-data="{  }">
