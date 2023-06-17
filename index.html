@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
-  <body class="bg-violet-400 text-violet-800" x-data=" { page: 0 }">
+  <body class="bg-violet-400 text-violet-800" x-data="{ page: 0 }">
     <div class="z-30 w-screen h-screen bg-red-600 fixed text-red-200 text-7xl text-center" id="loading">
       LOADING
     </div>
@@ -50,9 +50,11 @@
       
     </div>
     <div x-show="page==2" x-data="{ blog: 0 }" class="text-violet-400">
-      <button class="p-3 fixed z-20 top-0 left-0 bg-red-600 text-red-200 rounded-b-3xl" x-show="!blog==0" @click="blog=0">
-        Exit Blog
-      </button>
+      <div x-show="shownav">
+        <button class="p-3 fixed z-20 top-0 left-0 bg-red-600 text-red-200 rounded-b-3xl" x-show="!blog==0" @click="blog=0">
+          Exit Blog
+        </button>
+      </div>
       <div class="grid grid-cols-1 gap-1 mx-1 mt-1" x-show="blog==0">
         <p class="bg-violet-800 p-3 rounded-t-3xl rounded-b-lg">
           Blog
