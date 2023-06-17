@@ -38,7 +38,7 @@
       
     </div>
     <div x-show="page==2" x-data=" { section: 0 } ">
-      <button class="p-3 fixed z-20 top-0 left-0 bg-red-600 text-red-200 rounded-br-3xl" x-show="!section==0" @click="section=0">
+      <button class="p-3 fixed z-20 top-0 left-0 bg-red-600 text-red-200 rounded-b-3xl" x-show="!section==0" @click="section=0">
         Exit Blog
       </button>
       <div class="grid grid-cols-1 gap-1 mx-1 mt-1" x-show="section==0">
@@ -52,7 +52,7 @@
           First Post!     
         </button>    
       </div>
-      <div class="w-full y-full bg-indigo-800 z-10 rounded-3xl p-3" x-show="!section==0">
+      <div class="w-full y-full bg-indigo-800 z-10 p-3" x-show="!section==0">
         <p class="bg-indigo-800 p-3 rounded-b-3xl">
           hidden
         </p>
