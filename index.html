@@ -82,19 +82,19 @@
         </p>
         <p x-show="blog==3">
           The string 'This statement is false.', according to JavaScript, is 
-          <p x-show="'This statement is false.'==true">
+          <p x-show="!!'This statement is false.'">
             True! 
           </p>
-          <p x-show="'This statement is false.'==false">
+          <p x-show="!'This statement is false.'">
             False! 
           </p>
           <p>
             Of course, this isn't truly fact, its based off of the JavaScript loose type conversions. There is no true answer for whether 'This statement is false.' is true or false, but if im ever asked, im gonna side with JavaScript. If you don't believe me for some reason, that JavaScript says 'This statement is false.' is 
           </p>
-          <p x-show="'This statement is false.'==true">
+          <p x-show="!!'This statement is false.'">
             true, 
           </p>
-          <p x-show="'This statement is false.'==false">
+          <p x-show="!'This statement is false.'">
             false, 
           </p>
           try it yourself. Go into the browser console and type console.log(!!'This statement is false.'); to see, this is because ! is the logical operator for not, !! is not not, which cancel eachother out. ! starts with a type conversion, so if you type two before a string, it type converts the string to a boolean. Now go away.
